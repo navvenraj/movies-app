@@ -5,13 +5,14 @@ import logo from '../../assets/logo.svg';
 import Modal from 'react-modal';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-
+import ReactDOM from 'react-dom';
 import Typography from '@material-ui/core/Typography';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import Input from '@material-ui/core/Input';
 import PropTypes from 'prop-types';
 import FormHelperText from '@material-ui/core/FormHelperText';
+import BookShow from '../../screens/bookshow/BookShow';
 
 
 const customStyles = {
@@ -130,6 +131,9 @@ class Header extends Component {
 
     inputContactChangeHandler = (e) => {
         this.setState({ contact: e.target.value });
+    }
+    bookShowHandler = (e) => {
+        ReactDOM.render(<BookShow />, document.getElementById('root'));
     }
 
 

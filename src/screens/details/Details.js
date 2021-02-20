@@ -10,6 +10,7 @@ import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
+import BookShow from '../../screens/bookshow/BookShow';
 
 
 
@@ -76,6 +77,9 @@ class Details extends Component {
             starIconList.push(starNode);
         }
         this.setState({ starIcons: starIconList });
+    }
+    bookShowHandler = (e) => {
+        ReactDOM.render(<BookShow />, document.getElementById('root'));
     }
 
 
