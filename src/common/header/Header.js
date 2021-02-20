@@ -144,6 +144,13 @@ class Header extends Component {
                         <Button variant="contained" color="default" onClick={this.openModalHandler}>
                             Login
                         </Button>
+                        {this.props.showBookShowButton === "true" ?
+                        <div className="bookshow-button">
+                            <Button variant="contained" color="primary" onClick={this.bookShowHandler}>
+                                Book Show
+                            </Button>
+                        </div>
+                        : ""}
                     </div>
                 </header>
                 <Modal 
